@@ -12,7 +12,9 @@ const userGet = async( req, res = response ) => {
         User.find(query)
             .limit(Number(limit))
             .skip(Number(from))
-    ]);
+    ]).catch( () => {
+        console.log('Promise rejected');
+    });
 
     res.json({
         total,
