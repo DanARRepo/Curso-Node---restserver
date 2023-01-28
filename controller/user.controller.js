@@ -22,7 +22,7 @@ const userGet = async (req, res = response) => {
             users
         });
     } catch (err) {
-        next(err);
+        console.log(err);
     }
 }
 
@@ -42,7 +42,7 @@ const userPost = async (req, res = response) => {
             user
         });
     } catch (err) {
-        next(err);
+        console.log(err);
     }
 
 }
@@ -61,7 +61,7 @@ const userPut = async (req, res = response) => {
 
         res.json(userDB);
     } catch (err) {
-        next(err);
+        console.log(err);
     }
 }
 
@@ -71,7 +71,7 @@ const userPatch = (req, res = response) => {
             msg: 'patch API - Controller'
         });
     } catch (err) {
-        next(err);
+        console.log(err);
     }
 }
 
@@ -88,7 +88,7 @@ const userDelete = async (req, res = response) => {
             user
         });
     } catch (err) {
-        next(err);
+        console.log(err);
     }
 }
 
